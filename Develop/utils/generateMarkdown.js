@@ -17,4 +17,7 @@ function generateMarkdown(data) {
 `;
 }
 
+//module .exports exports all code in
 module.exports = generateMarkdown;
+
+//data object is what comes from the index.js and we need to parse out data from it and make object literal on it. make sure to use MD syntax in obj literal
