@@ -2,6 +2,7 @@
 
 const inquirer = require("inquirer");
 const fs = require("fs");
+const generateMarkdown = require("./utils/generateMarkdown");
 // TODO: Create an array of questions for user input. put objects of questions in questions array and then put questions variable into inquier.prompt(question)
 const questions = [
   {
@@ -81,17 +82,11 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
   inquirer.prompt(questions).then((response) => {
-    const buildReadMe = generateMarkdown(response);
-    writeToFile("yourREADME.md", buildReadMe);
+    let storedUserInput = generateMarkdown(response);
+    writeToFile("yourREADME.md", storedUserInput);
     console.log(response);
   });
 }
-
-// fs.writeFile("file.txt", JSON.stringify(response), (err) => {
-//   if (err) throw err;
-//   console.log("The file has been saved!");
-//   JSON.parse;
-// });
 
 // Function call to initialize app
 init();
