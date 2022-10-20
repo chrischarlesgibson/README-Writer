@@ -1,59 +1,64 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseLink(data) {
+  let licenseLink;
   if (data.license === "MIT") {
-    let licenseLink = "![License: MIT](https://opensource.org/licenses/MIT)";
+    licenseLink = "![License: MIT](https://opensource.org/licenses/MIT)";
   } else if (data.license === "Apache") {
-    let licenseLink =
+    licenseLink =
       "![License: Apache](https://opensource.org/licenses/Apache-2.0)";
   } else if (data.license === "GPLv2") {
-    let licenseLink =
+    licenseLink =
       "![License: GPL v2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)";
   } else if (data.license === "GPLv3") {
-    let licenseLink =
-      "![License: GPL v3](https://www.gnu.org/licenses/gpl-3.0)";
+    licenseLink = "![License: GPL v3](https://www.gnu.org/licenses/gpl-3.0)";
   } else if (data.license === "BSD 3-clause") {
-    let licenseLink =
+    licenseLink =
       "![License: BSD 3-clause](https://opensource.org/licenses/BSD-3-Clause)";
   } else if (data.license === "no license") {
-    let licenseLink = "";
+    licenseLink = "";
   }
+  return licenseLink;
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseBadge(data) {
+  let licenseBadge;
   if (data.license === "MIT") {
-    let licenseBadge =
+    licenseBadge =
       "[License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)";
   } else if (data.license === "Apache") {
-    let licenseBadge =
+    licenseBadge =
       "[License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)";
   } else if (data.license === "GPLv2") {
-    let licenseBadge =
+    licenseBadge =
       "[License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)";
   } else if (data.license === "GPLv3") {
-    let licenseBadge =
+    licenseBadge =
       "[License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)";
   } else if (data.license === "BSD 3-clause") {
-    let licenseBadge =
+    licenseBadge =
       "[License: BSD 3-clause](https://opensource.org/licenses/BSD-3-Clause)";
   } else if (data.license === "no license") {
-    let licenseBadge = "";
+    licenseBadge = "";
   }
+  return licenseBadge;
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(data) {
-  let licenseBadge = renderLicenseBadge(data);
-  let licenseLink = renderLicenseLink(data);
-  let licenseSection = `${licenseBadge}${licenseLink}`;
+  const licenseBadge = renderLicenseBadge(data);
+  const licenseLink = renderLicenseLink(data);
+  const licenseSection = `${licenseBadge}${licenseLink}`;
   return licenseSection;
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  renderLicenseSection(data);
+  renderBadges(data);
   return `# ${data.title}
   ---
   ## Description
@@ -108,11 +113,11 @@ module.exports = generateMarkdown;
 
 //function for rendering non-license badges
 function renderBadges(data) {
-  var badgesRequested = data.badges;
+  const badgesRequested = data.badges;
   var badgesArray = [];
-  for (let i = 0; i < badgesRequested.length; i++) {
-    var repositoryName = data.repoName;
-    var username = data.username;
+  for (var i = 0; i < badgesRequested.length; i++) {
+    const repositoryName = data.repoName;
+    const username = data.username;
     if (badgesRequested[i] === "Github Stats") {
       badgesArray.push(
         `![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true)`
@@ -129,7 +134,7 @@ function renderBadges(data) {
       );
     }
     if (badgesRequested[i] === "no badges") {
-      let badgesArray = [];
+      var badgesArray = [];
     }
     return renderBadges;
   }

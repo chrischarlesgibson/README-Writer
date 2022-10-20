@@ -31,7 +31,7 @@ const questions = [
     name: "usage",
   },
   {
-    type: "input",
+    type: "list",
     message: "Enter license information",
     name: "license",
     choices: ["MIT", "Apache", "GPLv2", "GPLv3", "BSD 3-clause", "no license"],
@@ -76,11 +76,6 @@ const questions = [
     type: "input",
     message: "Enter tests",
     name: "tests",
-  },
-  {
-    type: "input",
-    message: "Enter github username",
-    name: "questions",
   },
 ];
 
