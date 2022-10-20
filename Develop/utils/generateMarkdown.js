@@ -81,7 +81,7 @@ function renderBadges(data) {
 function createUsage(data) {
   if (data.usageQuestion === true) {
     var use = `## Usage
-    ${data.usage}`;
+  ${data.usage}`;
   } else {
     use = "";
   }
@@ -91,7 +91,7 @@ function createUsage(data) {
 function createInstallation(data) {
   if (data.installationQuestion === true) {
     var inst = `## Installation
-    ${data.installation}`;
+  ${data.installation}`;
   } else {
     inst = "";
   }
@@ -101,7 +101,7 @@ function createInstallation(data) {
 function createFeatures(data) {
   if (data.featuresQuestion === true) {
     var feature = `## Features
-    ${data.features}`;
+  ${data.features}`;
   } else {
     feature = "";
   }
@@ -111,7 +111,7 @@ function createFeatures(data) {
 function createContributing(data) {
   if (data.contributingQuestion === true) {
     var contribute = `## Contributing
-    ${data.contributing}`;
+  ${data.contributing}`;
   } else {
     contribute = "";
   }
@@ -121,7 +121,7 @@ function createContributing(data) {
 function createTesting(data) {
   if (data.testsQuestion === true) {
     var test1 = `## Contributing
-    ${data.tests}`;
+  ${data.tests}`;
   } else {
     test1 = "";
   }
@@ -131,14 +131,14 @@ function createTesting(data) {
 function createTableOfContents(data) {
   if (data.TableOfContentsQuestion === true) {
     var tableContents = `## Table of Contents
-    - [Description](#Description)
-    - [installation](#Installation)
-    - [usage](#Usage)
-    - [credits](#Credits)
-    - [license](#License)
-    - [badges](#Badges)
-    - [features](#Features)
-    - [tests](#Tests)`;
+  - [Description](#Description)
+  - [installation](#Installation)
+  - [usage](#Usage)
+  - [credits](#Credits)
+  - [license](#License)
+  - [badges](#Badges)
+  - [features](#Features)
+  - [tests](#Tests)`;
   } else {
     tableContents = "";
   }
@@ -169,28 +169,28 @@ function generateMarkdown(data) {
   return `# ${data.title}
   ---
 
-  ## Description
+## Description
   
 ${data.description}
 ## License
-  ${renderLicenseSentence(data)}
-  ${renderLicenseSection(data)}
+${renderLicenseSentence(data)}
+${renderLicenseSection(data)}
 ---
 ${createTableOfContents(data)}
   
-  ---
+---
   
 ${createInstallation(data)}
   
- ---
+---
   
 ${createUsage(data)}
   
-  ## Credits
+## Credits
   
-  ${data.credits}
+${data.credits}
   
-  ## Badges
+## Badges
   
 ${renderBadges(data)}
 
@@ -201,15 +201,15 @@ ${createFeatures(data)}
 
  ---
   
- ${createContributing(data)}
+${createContributing(data)}
 
  ---
   
-  ${createTesting(data)}
+${createTesting(data)}
 
-  ## Questions
+## Questions
 
-  If you are experiencing any issues, you can contact me at my [Github](https://github.com/${
+If you are experiencing any issues, you can contact me at my [Github](https://github.com/${
     data.username
   })-user name of  ${data.username}  or  contact me through email:${data.email}
   
