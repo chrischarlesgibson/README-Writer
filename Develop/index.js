@@ -31,6 +31,12 @@ const questions = [
     name: "usage",
   },
   {
+    type: "input",
+    message: "Enter credits",
+    name: "credits",
+  },
+
+  {
     type: "list",
     message: "Enter license information",
     name: "license",
@@ -81,6 +87,7 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
+  console.log(data);
   fs.writeFile(fileName, data, (err) =>
     err ? console.error(err) : console.log("Success!")
   );

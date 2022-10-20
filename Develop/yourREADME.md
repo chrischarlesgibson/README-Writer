@@ -1,8 +1,8 @@
-# README
+# R
   ---
   ## Description
   ---
-jvhelifjbvwliejkfbvwl;eijfvblwkejfbvlwfejbvlwkefjbvlkwejfbvlwkjfbvlwkjdfbvwlkjdfbvklwjdfbvlkwjfbvlkdjfbvwkjfbvlkjdfbvwkdjfbvwlkjdfbvlkwjvbw
+a
 
   ---
   ## Table of Contents
@@ -18,27 +18,28 @@ jvhelifjbvwliejkfbvwl;eijfvblwkejfbvlwfejbvlwkefjbvlkwejfbvlwkjfbvlwkjdfbvwlkjdf
    ---
   ## Installation
   ---
-  jsdfblwfvbwkljfbvwlkejfbvwkljfbvwkjbfv
+  a
   ---
   ## Usage
   ---
-  wkljdvnwlkjfbv
+  a
   ---
   ## Credits
   ---
-  undefined
+  a
 
   ## License
   ---
-  MIT
+  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)[License: MIT](https://opensource.org/licenses/MIT)
+  
   ## Badges
   ---
-  Github Stats,most used languages,Contributors badges
+  ![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=chrischarlesgibson&show_icons=true)
   ## Features
   ---
-  dfgewegrt
+  a
   ## Contributing
   ---
   ## Tests
   ---
-  wrtegwtgwt
+  a
