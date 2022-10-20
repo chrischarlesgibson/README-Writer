@@ -81,6 +81,7 @@ function renderBadges(data) {
 function createUsage(data) {
   if (data.usageQuestion === true) {
     var use = `## Usage
+  ---
   ${data.usage}`;
   } else {
     use = "";
@@ -91,6 +92,7 @@ function createUsage(data) {
 function createInstallation(data) {
   if (data.installationQuestion === true) {
     var inst = `## Installation
+  ---
   ${data.installation}`;
   } else {
     inst = "";
@@ -101,6 +103,7 @@ function createInstallation(data) {
 function createFeatures(data) {
   if (data.featuresQuestion === true) {
     var feature = `## Features
+  ---
   ${data.features}`;
   } else {
     feature = "";
@@ -111,6 +114,7 @@ function createFeatures(data) {
 function createContributing(data) {
   if (data.contributingQuestion === true) {
     var contribute = `## Contributing
+  ---
   ${data.contributing}`;
   } else {
     contribute = "";
@@ -120,7 +124,8 @@ function createContributing(data) {
 
 function createTesting(data) {
   if (data.testsQuestion === true) {
-    var test1 = `## Contributing
+    var test1 = `## Tests
+  ---
   ${data.tests}`;
   } else {
     test1 = "";
@@ -131,6 +136,7 @@ function createTesting(data) {
 function createTableOfContents(data) {
   if (data.TableOfContentsQuestion === true) {
     var tableContents = `## Table of Contents
+  ---
   - [Description](#Description)
   - [installation](#Installation)
   - [usage](#Usage)
@@ -167,52 +173,55 @@ function renderLicenseSentence(data) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-  ---
+---
+## License
+---
+${renderLicenseSection(data)}
 
 ## Description
-  
+---
 ${data.description}
-## License
-${renderLicenseSentence(data)}
-${renderLicenseSection(data)}
----
+
 ${createTableOfContents(data)}
-  
----
-  
+
 ${createInstallation(data)}
-  
----
-  
+
 ${createUsage(data)}
-  
+
+${createFeatures(data)}
+
+${createContributing(data)}
+
+${createTesting(data)}
+
+${renderLicenseSentence(data)}
+
+
 ## Credits
-  
+---
 ${data.credits}
   
 ## Badges
-  
+---  
 ${renderBadges(data)}
 
- ----
   
-${createFeatures(data)}
 
 
- ---
   
-${createContributing(data)}
 
- ---
+
   
-${createTesting(data)}
+
 
 ## Questions
 
 If you are experiencing any issues, you can contact me at my [Github](https://github.com/${
     data.username
   })-user name of  ${data.username}  or  contact me through email:${data.email}
-  
+  ## License
+---
+${licenseLink}
 `;
 }
 
