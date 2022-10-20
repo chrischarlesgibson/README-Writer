@@ -48,14 +48,56 @@ function renderLicenseBadge(data) {
 function renderLicenseSection(data) {
   let licenseBadge = renderLicenseBadge(data);
   let licenseLink = renderLicenseLink(data);
-  let licenseSection = `${licenseLink}${licenseLink}`;
+  let licenseSection = `${licenseBadge}${licenseLink}`;
   return licenseSection;
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+  ---
+  ## Description
+  ---
+${data.description}
 
+  ---
+  ## Table of Contents
+   -[Description](#Description)
+   -[installation](#Installation)
+   -[usage](#Usage)
+   -[credits](#Credits)
+   -[license](#License)
+   -[badges](#Badges)
+   -[features](#Features)
+   -[tests](#Tests)
+  
+   ---
+  ## Installation
+  ---
+  ${data.installation}
+  ---
+  ## Usage
+  ---
+  ${data.usage}
+  ---
+  ## Credits
+  ---
+  ${data.credits}
+
+  ## License
+  ---
+  ${data.license}
+  ## Badges
+  ---
+  ${data.badges}
+  ## Features
+  ---
+  ${data.features}
+  ## Contributing
+  ---
+  ## Tests
+  ---
+  ${data.tests}
 `;
 }
 
@@ -69,25 +111,26 @@ function renderBadges(data) {
   var badgesRequested = data.badges;
   var badgesArray = [];
   for (let i = 0; i < badgesRequested.length; i++) {
-    const repositoryName = data.repoName;
-    const username = data.username;
+    var repositoryName = data.repoName;
+    var username = data.username;
     if (badgesRequested[i] === "Github Stats") {
       badgesArray.push(
         `![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true)`
       );
     }
-    if (badgesRequested[i] === "most used languages")
+    if (badgesRequested[i] === "most used languages") {
       badgesArray.push(
         `![Your Repository's languages](https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&theme=blue-green)`
       );
+    }
+    if (badgesRequested[i] === "Contributors badges") {
+      badgesArray.push(
+        `![GitHub Contributors Image](https://contrib.rocks/image?repo=${username}/${repositoryName})`
+      );
+    }
+    if (badgesRequested[i] === "no badges") {
+      let badgesArray = [];
+    }
+    return renderBadges;
   }
-  if (badgesRequested[i] === "Contributors badges")
-    badgesArray.push(
-      `![GitHub Contributors Image](https://contrib.rocks/image?repo=${username}/${repositoryName})`
-    );
 }
-if (badgesRequested[i] === "no badges") {
-  let badgesArray = [];
-}
-
-renderBadges(data);
