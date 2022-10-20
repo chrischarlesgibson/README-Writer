@@ -47,10 +47,25 @@ const questions = [
     name: "installation",
   },
   {
+    type: "input",
+    message: "provide your github username",
+    name: "username",
+  },
+  {
+    type: "input",
+    message: "provide your github repository name",
+    name: "repoName",
+  },
+  {
     type: "checkbox",
     message: "Enter badges to add",
     name: "badges",
-    choices: ["Github Stats", "most used languages", "Contributors badges"],
+    choices: [
+      "Github Stats",
+      "most used languages",
+      "Contributors badges",
+      "no badges",
+    ],
   },
   {
     type: "input",
