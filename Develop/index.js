@@ -39,6 +39,7 @@ const questions = [
     type: "input",
     message: "Enter license information",
     name: "license",
+    choices: ["MIT", "Apache", "GPLv2", "GPLv3", "BSD 3-clause", "no license"],
   },
   {
     type: "input",
@@ -46,9 +47,10 @@ const questions = [
     name: "installation",
   },
   {
-    type: "input",
+    type: "checkbox",
     message: "Enter badges to add",
     name: "badges",
+    choices: ["Github Stats", "most used languages", "Contributors badges"],
   },
   {
     type: "input",
