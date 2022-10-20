@@ -18,12 +18,22 @@ const questions = [
   {
     type: "confirm",
     message: "would you like a table of contents?",
-    name: "Table of contents question",
+    name: "TableOfContentsQuestion",
+  },
+  {
+    type: "confirm",
+    message: "would you to provide installation information?",
+    name: "installationQuestion",
   },
   {
     type: "input",
     message: "provide installation instructions",
     name: "installation",
+  },
+  {
+    type: "confirm",
+    message: "would you to provide usage information?",
+    name: "usageQuestion",
   },
   {
     type: "input",
@@ -44,13 +54,13 @@ const questions = [
   },
   {
     type: "input",
-    message: "provide installation instructions",
-    name: "installation",
+    message: "provide your github username",
+    name: "username",
   },
   {
     type: "input",
-    message: "provide your github username",
-    name: "username",
+    message: "provide your email",
+    name: "email",
   },
   {
     type: "input",
@@ -69,9 +79,19 @@ const questions = [
     ],
   },
   {
+    type: "confirm",
+    message: "would you to provide features information?",
+    name: "featuresQuestion",
+  },
+  {
     type: "input",
     message: "Enter features information",
     name: "features",
+  },
+  {
+    type: "confirm",
+    message: "would you to provide contributing information?",
+    name: "contributingQuestion",
   },
   {
     type: "input",
@@ -79,12 +99,16 @@ const questions = [
     name: "contributing",
   },
   {
+    type: "confirm",
+    message: "would you to provide testing information?",
+    name: "testsQuestion",
+  },
+  {
     type: "input",
     message: "Enter tests",
     name: "tests",
   },
 ];
-
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
   console.log(data);

@@ -72,10 +72,77 @@ function renderBadges(data) {
       );
     }
     if (badgesRequested[i] === "no badges") {
-      badgesArray = [];
+      badgesArray = "";
     }
     return badgesArray;
   }
+}
+
+function createUsage(data) {
+  if (data.usageQuestion === true) {
+    var use = `## Usage
+    ${data.usage}`;
+  } else {
+    use = "";
+  }
+  return use;
+}
+
+function createInstallation(data) {
+  if (data.installationQuestion === true) {
+    var inst = `## Installation
+    ${data.installation}`;
+  } else {
+    inst = "";
+  }
+  return inst;
+}
+
+function createFeatures(data) {
+  if (data.featuresQuestion === true) {
+    var feature = `## Features
+    ${data.features}`;
+  } else {
+    feature = "";
+  }
+  return feature;
+}
+
+function createContributing(data) {
+  if (data.contributingQuestion === true) {
+    var contribute = `## Contributing
+    ${data.contributing}`;
+  } else {
+    contribute = "";
+  }
+  return contribute;
+}
+
+function createTesting(data) {
+  if (data.testsQuestion === true) {
+    var test1 = `## Contributing
+    ${data.tests}`;
+  } else {
+    test1 = "";
+  }
+  return test1;
+}
+
+function createTableOfContents(data) {
+  if (data.TableOfContentsQuestion === true) {
+    var tableContents = `## Table of Contents
+    - [Description](#Description)
+    - [installation](#Installation)
+    - [usage](#Usage)
+    - [credits](#Credits)
+    - [license](#License)
+    - [badges](#Badges)
+    - [features](#Features)
+    - [tests](#Tests)`;
+  } else {
+    tableContents = "";
+  }
+  return tableContents;
 }
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -86,53 +153,66 @@ function renderLicenseSection(data) {
   return licenseSection;
 }
 
+function renderLicenseSentence(data) {
+  var licenseSentence = data.license;
+  for (let i = 0; i < licenseSentence.length; i++)
+    if (data.license === licenseSentence[i]) {
+      licenseSentence = `Licensed under the ${licenseSentence[i]} license`;
+    } else if (data.license === "no license") {
+      licenseSentence = "";
+    }
+  return licenseSentence;
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
   ---
+
   ## Description
-  ---
-${data.description}
-
-  ---
-  ## Table of Contents
-   -[Description](#Description)
-   -[installation](#Installation)
-   -[usage](#Usage)
-   -[credits](#Credits)
-   -[license](#License)
-   -[badges](#Badges)
-   -[features](#Features)
-   -[tests](#Tests)
   
-   ---
-  ## Installation
-  ---
-  ${data.installation}
-  ---
-  ## Usage
-  ---
-  ${data.usage}
-  ---
-  ## Credits
-  ---
-  ${data.credits}
-
-  ## License
-  ---
+${data.description}
+## License
+  ${renderLicenseSentence(data)}
   ${renderLicenseSection(data)}
+---
+${createTableOfContents(data)}
+  
+  ---
+  
+${createInstallation(data)}
+  
+ ---
+  
+${createUsage(data)}
+  
+  ## Credits
+  
+  ${data.credits}
   
   ## Badges
-  ---
-  ${renderBadges(data)}
-  ## Features
-  ---
-  ${data.features}
-  ## Contributing
-  ---
-  ## Tests
-  ---
-  ${data.tests}
+  
+${renderBadges(data)}
+
+ ----
+  
+${createFeatures(data)}
+
+
+ ---
+  
+ ${createContributing(data)}
+
+ ---
+  
+  ${createTesting(data)}
+
+  ## Questions
+
+  If you are experiencing any issues, you can contact me at my [Github](https://github.com/${
+    data.username
+  })-user name of  ${data.username}  or  contact me through email:${data.email}
+  
 `;
 }
 
