@@ -77,6 +77,12 @@ const questions = [
     message: "provide your github repository name",
     name: "repoName",
   },
+  // {
+  //   type: "checkbox",
+  //   name: "technologies",
+  //   message: "What languages/technologies did you build your project with?", // License (3)
+  //   choices: ["HTML", "CSS", "JavaScript", "jQuery", "Node.js", "Bootstrap"],
+  // },
   {
     type: "checkbox",
     message: "Enter badges to add",

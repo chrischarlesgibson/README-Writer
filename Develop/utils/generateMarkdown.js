@@ -148,8 +148,8 @@ function createTableOfContents(data) {
   - [installation](#Installation)
   - [usage](#Usage)
   - [features](#Features)
-  - [Contributing](#Contributing)
-  - [tests](#Tests)
+  - [Contributing guidlines](#Contributing)
+  - [test](#Tests)
   - [license](#License)
   - [credits](#Credits)
   - [badges](#Badges)
@@ -175,11 +175,50 @@ function renderLicenseSentence(data) {
   for (let i = 0; i < licenseSentence.length; i++)
     if (data.license === licenseSentence[i]) {
       licenseSentence = `Licensed under the ${licenseSentence[i]} license`;
+      console.log(licenseSentence[i]);
     } else if (data.license === "no license") {
       licenseSentence = "";
     }
+
   return licenseSentence;
 }
+
+// function renderTechnologies(data) {
+//   var technologies = data.technologies;
+//   var techArray = [];
+//   for (let i = 0; i < technologies.length; i++) {
+//     if (technologies[i] === "HTML") {
+//       techArray.push(
+//         "* HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)"
+//       );
+//     }
+//     if (technologies[i] === "Javascript") {
+//       techArray.push(
+//         "* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)"
+//       );
+//     }
+//     if (technologies[i] === "CSS") {
+//       techArray.push(
+//         "* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)"
+//       );
+//     }
+//     if (technologies[i] === "jQuery") {
+//       techArray.push("* [jQuery](https://api.jquery.com/)");
+//     }
+//     if (technologies[i] === "Node.js") {
+//       techArray.push("* [Node.js](https://nodejs.org/en/)");
+//     }
+//     if (technologies[i] === "Node.js") {
+//       techArray.push(
+//         "* [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/)"
+//       );
+//     }
+//   }
+//   return renderTechnologies;
+// }
+
+// ## Built with:
+// ${renderTechnologies(data)}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
