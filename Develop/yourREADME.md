@@ -27,7 +27,7 @@ N/A
 
 There is a recipe tab and exercise tab on the homepage. Clicking on either one will bring you to a search page where you can search for your exercise or find a healthy recipe that fits your nutritional needs. You can save you favorite recipes and exercises to the homepage for viewing later and you can also track daily nutritional intake.
 
-![Gif](./images/LivHealthy.gif)
+![Gif](./LivHealthy.gif)
 
 ## Features
 
