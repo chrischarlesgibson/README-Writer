@@ -77,15 +77,10 @@ const questions = [
     message: "provide your github repository name",
     name: "repoName",
   },
-  // {
-  //   type: "checkbox",
-  //   name: "technologies",
-  //   message: "What languages/technologies did you build your project with?", // License (3)
-  //   choices: ["HTML", "CSS", "JavaScript", "jQuery", "Node.js", "Bootstrap"],
-  // },
+
   {
-    type: "checkbox",
-    message: "Enter badges to add",
+    type: "list",
+    message: "Enter badge to add",
     name: "badges",
     choices: [
       "Github Stats",
@@ -148,5 +143,3 @@ function init() {
 
 // Function call to initialize app
 init();
-
-// list all question in index.js and call the generate markdown function. this file will tell the GM file what to append to the page. make prompts first. then store input in variable and figure out how to get variable into the markdoen file and make an object literal

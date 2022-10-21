@@ -166,20 +166,6 @@ function renderLicenseSection(data) {
   return licenseBadge;
 }
 
-// function renderLicenseSection(data) {
-// licenseLink = renderLicenseLink(data);
-//   var licenseSection = `${licenseBadge}${licenseLink}`;
-
-// var badgesRequested = data.badges;
-// var badgesArray = [];
-// var repositoryName = data.repoName;
-// var username = data.username;
-// for (var i = 0; i < badgesRequested.length; i++) {
-//   if (badgesRequested[i] === "Github Stats") {
-//     badgesArray.push(
-//       `![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true)`
-//     );
-//     console.log(badgesArray);
 function renderLicenseSentence(data) {
   if (data.license) {
     var licenseSentence = `Licensed under the ${
@@ -192,43 +178,6 @@ function renderLicenseSentence(data) {
   }
   return licenseSentence;
 }
-
-// function renderTechnologies(data) {
-//   var technologies = data.technologies;
-//   var techArray = [];
-//   for (let i = 0; i < technologies.length; i++) {
-//     if (technologies[i] === "HTML") {
-//       techArray.push(
-//         "* HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)"
-//       );
-//     }
-//     if (technologies[i] === "Javascript") {
-//       techArray.push(
-//         "* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)"
-//       );
-//     }
-//     if (technologies[i] === "CSS") {
-//       techArray.push(
-//         "* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)"
-//       );
-//     }
-//     if (technologies[i] === "jQuery") {
-//       techArray.push("* [jQuery](https://api.jquery.com/)");
-//     }
-//     if (technologies[i] === "Node.js") {
-//       techArray.push("* [Node.js](https://nodejs.org/en/)");
-//     }
-//     if (technologies[i] === "Node.js") {
-//       techArray.push(
-//         "* [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/)"
-//       );
-//     }
-//   }
-//   return renderTechnologies;
-// }
-
-// ## Built with:
-// ${renderTechnologies(data)}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -270,7 +219,7 @@ ${renderBadges(data)}
 
 If you are experiencing any issues, you can contact me at my Github [${
     data.username
-  }](https://github.com/${data.username}) or contact me through email at${
+  }](https://github.com/${data.username}) or contact me through email at ${
     data.email
   }`;
 }
