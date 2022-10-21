@@ -129,7 +129,11 @@ const questions = [
 function writeToFile(fileName, data) {
   console.log(data);
   fs.writeFile(fileName, data, (err) =>
-    err ? console.error(err) : console.log("Success!")
+    err
+      ? console.error(err)
+      : console.log(
+          "Success! Checkfor your README.md file in the folder that holds your index.js file "
+        )
   );
 }
 
