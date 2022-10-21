@@ -28,18 +28,16 @@ function renderLicenseBadge(data) {
 function renderLicenseLink(data) {
   var licenseLink = "";
   if (data.license === "MIT") {
-    licenseLink = "[License: MIT](https://opensource.org/licenses/MIT)";
+    licenseLink = "[Link here](https://opensource.org/licenses/MIT)";
   } else if (data.license === "Apache") {
-    licenseLink =
-      "[License: Apache](https://opensource.org/licenses/Apache-2.0)";
+    licenseLink = "[Link here](https://opensource.org/licenses/Apache-2.0)";
   } else if (data.license === "GPLv2") {
     licenseLink =
-      "[License: GPL v2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)";
+      "[Link here](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)";
   } else if (data.license === "GPLv3") {
-    licenseLink = "[License: GPL v3](https://www.gnu.org/licenses/gpl-3.0)";
+    licenseLink = "[Link here](https://www.gnu.org/licenses/gpl-3.0)";
   } else if (data.license === "BSD 3-clause") {
-    licenseLink =
-      "[License: BSD 3-clause](https://opensource.org/licenses/BSD-3-Clause)";
+    licenseLink = "[Link here](https://opensource.org/licenses/BSD-3-Clause)";
   } else if (data.license === "no license") {
     licenseLink = "";
   }
@@ -87,6 +85,15 @@ function createUsage(data) {
     use = "";
   }
   return use;
+}
+
+function createUsageImage(data) {
+  if (data.usageImageQuestion === true) {
+    var useImage = `![Gif](${data.usageImage})`;
+  } else {
+    useImage = "";
+  }
+  return useImage;
 }
 
 function createInstallation(data) {
@@ -140,11 +147,14 @@ function createTableOfContents(data) {
   - [Description](#Description)
   - [installation](#Installation)
   - [usage](#Usage)
-  - [credits](#Credits)
-  - [license](#License)
-  - [badges](#Badges)
   - [features](#Features)
-  - [tests](#Tests)`;
+  - [Contributing](#Contributing)
+  - [tests](#Tests)
+  - [license](#License)
+  - [credits](#Credits)
+  - [badges](#Badges)
+ 
+  - [Questions](#Questions)`;
   } else {
     tableContents = "";
   }
@@ -154,11 +164,12 @@ function createTableOfContents(data) {
 // If there is no license, return an empty string
 function renderLicenseSection(data) {
   licenseBadge = renderLicenseBadge(data);
-  licenseLink = renderLicenseLink(data);
-  var licenseSection = `${licenseBadge}${licenseLink}`;
-  return licenseSection;
+  return licenseBadge;
 }
 
+// function renderLicenseSection(data) {
+// licenseLink = renderLicenseLink(data);
+//   var licenseSection = `${licenseBadge}${licenseLink}`;
 function renderLicenseSentence(data) {
   var licenseSentence = data.license;
   for (let i = 0; i < licenseSentence.length; i++)
@@ -174,8 +185,6 @@ function renderLicenseSentence(data) {
 function generateMarkdown(data) {
   return `# ${data.title}
 ---
-## License
----
 ${renderLicenseSection(data)}
 
 ## Description
@@ -187,6 +196,7 @@ ${createTableOfContents(data)}
 ${createInstallation(data)}
 
 ${createUsage(data)}
+${createUsageImage(data)}
 
 ${createFeatures(data)}
 
@@ -194,8 +204,9 @@ ${createContributing(data)}
 
 ${createTesting(data)}
 
+## License
 ${renderLicenseSentence(data)}
-
+${renderLicenseLink(data)}
 
 ## Credits
 ---
@@ -205,24 +216,13 @@ ${data.credits}
 ---  
 ${renderBadges(data)}
 
-  
-
-
-  
-
-
-  
-
-
 ## Questions
 
 If you are experiencing any issues, you can contact me at my [Github](https://github.com/${
     data.username
-  })-user name of  ${data.username}  or  contact me through email:${data.email}
-  ## License
----
-${licenseLink}
-`;
+  })-user name of  ${data.username}  or  contact me through email:${
+    data.email
+  }`;
 }
 
 //module .exports exports all code in

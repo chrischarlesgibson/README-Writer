@@ -41,6 +41,16 @@ const questions = [
     name: "usage",
   },
   {
+    type: "confirm",
+    message: "would you to provide and image or GIF for usage information?",
+    name: "usageImageQuestion",
+  },
+  {
+    type: "input",
+    message: "Enter gif or image path or url",
+    name: "usageImage",
+  },
+  {
     type: "input",
     message: "Enter credits",
     name: "credits",

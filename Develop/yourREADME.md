@@ -1,8 +1,6 @@
-# rrr
+# rerre
 ---
-## License
----
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)[License: MIT](https://opensource.org/licenses/MIT)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Description
 ---
@@ -13,55 +11,48 @@ rrr
   - [Description](#Description)
   - [installation](#Installation)
   - [usage](#Usage)
-  - [credits](#Credits)
-  - [license](#License)
-  - [badges](#Badges)
   - [features](#Features)
+  - [Contributing](#Contributing)
   - [tests](#Tests)
+  - [license](#License)
+  - [credits](#Credits)
+  - [badges](#Badges)
+ 
+  - [Questions](#Questions)
 
 ## Installation
   ---
-  rtrr
+  rrr
 
 ## Usage
   ---
-  rrrr
+  terte
+![Gif](./utils/portfolio-background.png)
 
 ## Features
   ---
-  43334
+  v
 
 ## Contributing
   ---
-  444
+  
 
 ## Tests
   ---
-  rrr
+  f
 
+## License
 MIT
-
+[Link here](https://opensource.org/licenses/MIT)
 
 ## Credits
 ---
-rrrr
+dfgefr
   
 ## Badges
 ---  
-![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=&show_icons=true)
-
-  
-
-
-  
-
-
-  
-
+![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=chrischarlesgibson&show_icons=true)
 
 ## Questions
 
-If you are experiencing any issues, you can contact me at my [Github](https://github.com/)-user name of    or  contact me through email:rr
-  ## License
----
-[License: MIT](https://opensource.org/licenses/MIT)
+If you are experiencing any issues, you can contact me at my [Github](https://github.com/chrischarlesgibson)-user name of  chrischarlesgibson  or  contact me through email:erfew
