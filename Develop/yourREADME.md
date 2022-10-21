@@ -1,10 +1,10 @@
 # test title
 
-![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Description
 
-test description
+demo descprition
 
 ## Table of Contents
   
@@ -21,28 +21,28 @@ test description
   - [Questions](#Questions)
 
 ## Installation
-  example installation instructions
+  test demo
 
 ## Usage
-  example usage instructions
-![Gif](./utils/LivHealthy.gif)
+  usage demo
+![Gif](./utils/LivHealthhy.gif)
 
 ## Features
-  features demo here
+  demo features
 
 ## Contributing
-  any one feel free to contribute!
+  anyone can!
 
 ## Tests
   testing info here
 
 ## License
-GPLv2
-[Link here](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
+MIT
+[Link here](https://opensource.org/licenses/MIT)
 
 ## Credits
 
-N/A
+none
   
 ## Badges
 
